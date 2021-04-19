@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List Vanilla JS</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <h1>#todo</h1>
+  </header>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen"><p>All</p></button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')"><p>Active</p></button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')"><p>Completed</p></button>
+  <div class="division__line"></div>
+</div>
+<div class="search__container" id="search__container">
+  <input class="search-input" id="input__data" type="text" placeholder="add details">
+  <button class="search-button" onclick="addTask(event)">Add</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <div id="all__task-container">
+    <span><input type="checkbox" name="todo" id="1">Do coding challenges</span>
+    <span><input type="checkbox" name="todo" id="1">Do coding challenges</span>
+    <span><input type="checkbox" name="todo" id="1">Do coding challenges</span>
+  </div>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <div id="active__task-container">
+    
+  </div>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <div id="done__task-container">
+    <span><span class="done__task"><input type="checkbox" checked="true" name="todo" id="1">Do coding challenges</span><span class="material-icons">delete_outline</span></span>
+    <span><span class="done__task"><input type="checkbox" checked="true" name="todo" id="1">Do coding challenges</span><span class="material-icons">delete_outline</span></span>
+  </div>
+  <div class="container-delete__all">
+    <button class="delete__all">
+      <span class="material-icons">delete_outline</span>
+      delete all
+    </button>
+  </div>
+</div>
+  <script src="./index.js"></script>
+</body>
+</html>

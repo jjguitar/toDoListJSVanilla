@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;700&display=swap');
+
+html {
+  margin: 0;
+  padding: 0;
+  max-width: 610px;
+  margin: 0 auto;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  color: #333333;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* Style the tab */
+.tab {
+  position: relative;
+  height: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+  margin-bottom: 8px;
+  z-index: 0;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+  z-index: 1;
+}
+
+.tab button p {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+  margin: 0;
+  font-size: .7rem;
+  font-weight: 600;
+  padding-bottom: 4px;
+}
+
+/* Change background color of buttons on hover */
+/* .tab button:hover {
+  background-color: #ddd;
+} */
+
+/* Create an active/current tablink class */
+.tab button.active p {
+  border-bottom: 4px inset #2F80ED;
+  border-left: 4px inset transparent;
+  border-right: 4px inset transparent;
+  padding-bottom: 0px;
+}
+
+.division__line {
+  width: 100%;
+  position: absolute;
+  border-top: 1px solid #BDBDBD;
+  padding: 10px 5px;
+  top: 19px;
+  z-index: -5;
+}
+
+.search__container {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: minmax(100px, 470px) minmax(30px, 110px);
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: .7rem;
+  outline: none;
+}
+
+.search-button {
+  width: 100%;
+  background-color: #2F80ED;
+  color: white;
+  border-radius: 5px;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: .7rem;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  /* border: 1px solid #ccc; */
+  border-top: none;
+}
+
+.tabcontent div > span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  font-size: .8rem;
+}
+
+span > .material-icons {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  width: 14px;
+  height: 14px;
+  font-size: .8rem;
+  color: #BDBDBD;
+}
+
+span > input {
+  margin-right: 5px;
+}
+
+
+#done__task-container span {
+  justify-content: space-between;
+}
+
+#done__task-container span span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete__all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 20px;
+  background-color: #EB5757;
+  color: white;
+  border-radius: 5px;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: .7rem;
+}
+
+.delete__all > .material-icons {
+  font-size: .8rem;
+}
+
+.container-delete__all {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.done__task {
+  text-decoration: line-through;
+}
