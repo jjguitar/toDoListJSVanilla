@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ToDo List Vanilla JS</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./src/styles/styles.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
@@ -14,21 +14,21 @@
   </header>
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen"><p>All</p></button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')"><p>Active</p></button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')"><p>Completed</p></button>
+  <button class="tablinks" onclick="openCity(event, 'all')" id="defaultOpen"><p>All</p></button>
+  <button class="tablinks" onclick="openCity(event, 'active')"><p>Active</p></button>
+  <button class="tablinks" onclick="openCity(event, 'done')"><p>Completed</p></button>
   <div class="division__line"></div>
 </div>
 <div class="search__container" id="search__container">
-  <input class="search-input" id="input__data" type="text" placeholder="add details">
-  <button class="search-button" onclick="addTask(event)">Add</button>
+  <input class="search-input" id="input__data" type="text" placeholder="add details" required>
+  <button class="search-button" id="addTask">Add</button>
 </div>
+
+<div class="warning__alert"><h3 id="warning__alert-title" class="warning">*Required details</h3></div>
 
 <div id="London" class="tabcontent">
   <div id="all__task-container">
-    <span><input type="checkbox" name="todo" id="1">Do coding challenges</span>
-    <span><input type="checkbox" name="todo" id="1">Do coding challenges</span>
-    <span><input type="checkbox" name="todo" id="1">Do coding challenges</span>
+    
   </div>
 </div>
 
@@ -40,16 +40,22 @@
 
 <div id="Tokyo" class="tabcontent">
   <div id="done__task-container">
-    <span><span class="done__task"><input type="checkbox" checked="true" name="todo" id="1">Do coding challenges</span><span class="material-icons">delete_outline</span></span>
-    <span><span class="done__task"><input type="checkbox" checked="true" name="todo" id="1">Do coding challenges</span><span class="material-icons">delete_outline</span></span>
+    <!-- <span>
+      <span class="done__task">
+        <input type="checkbox" checked="true" name="todo" >Do coding challenges
+      </span>
+      <span class="material-icons">delete_outline</span>
+    </span> -->
+    
   </div>
   <div class="container-delete__all">
-    <button class="delete__all">
+    <button class="delete__all" id="delete-all">
       <span class="material-icons">delete_outline</span>
       delete all
     </button>
   </div>
 </div>
   <script src="./index.js"></script>
+  <script src="./src/index.js" type="module"></script>
 </body>
 </html>
